@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import HomePage from './views/HomePage.vue'
+import ChangeLogPage from './views/ChangeLogPage.vue'
 
 Vue.use(Router)
 
@@ -9,13 +9,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home
+      name: 'HomePage',
+      component: HomePage
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About
+      path: '/changelog',
+      name: 'ChangeLogPage',
+      component: ChangeLogPage
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })
