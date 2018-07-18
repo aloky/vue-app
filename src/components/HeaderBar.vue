@@ -32,8 +32,6 @@
     justify-content: space-between;
     border-bottom: 1px solid #e2ecf4;
     height: 49px;
-    overflow: hidden;
-    overflow-x: auto;
     white-space: nowrap;
     .at-menu--horizontal {
       border-bottom: none;

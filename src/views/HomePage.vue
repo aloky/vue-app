@@ -1,15 +1,15 @@
 <template>
   <div>
-    <hello-world message="Welcome to My Vue.js App"/>
+    <title-page title="Welcome to My Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import TitlePage from '@/components/TitlePage.vue'
 
 export default {
   components: {
-    HelloWorld
+    TitlePage
   }
 }
 </script>

@@ -7,7 +7,7 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
   footer {
     border-top: 1px solid #e2ecf4;
     padding: 20px;

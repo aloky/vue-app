@@ -31,12 +31,9 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    
     .content {
       flex-grow: 1;
-    }
-    h1 {
-      margin: 20px 0;
-      text-align: center;
     }
   }
 </style>

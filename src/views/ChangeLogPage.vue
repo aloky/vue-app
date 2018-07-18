@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Change log</h1>
+    <title-page title="Change log" />
     <div class="container">
       <div class="content-change-log">
         <at-timeline pending>
@@ -19,6 +19,14 @@
     </div>
   </div>
 </template>
+
+<script>
+  import TitlePage from '@/components/TitlePage.vue'
+  
+  export default {
+    components: { TitlePage }
+  }
+</script>
 
 <style lang="scss">
   .at-timeline {
