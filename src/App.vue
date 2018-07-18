@@ -24,16 +24,5 @@
 </script>
 
 <style lang="scss">
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    
-    .content {
-      flex-grow: 1;
-    }
-  }
+  @import "styles/styles.scss";
 </style>
