@@ -1,0 +1,87 @@
+body {
+  min-width: 300px;
+}
+
+div[class^='col'], div[class*='col']{
+  margin-bottom: 12px;
+}
+
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    flex-grow: 1;
+    padding: 15px;
+  }
+
+  .row {
+    margin-bottom: 12px;
+  }
+}
+
+// card
+.at-card {
+  box-shadow: 0 0 0 1px #ededed;
+  transition: all .2s ease-in-out;
+  overflow: hidden;
+  .at-card__img {
+    width: 100%;
+    height: 200px;
+    background: no-repeat center;
+    background-size: cover;
+  }
+  .at-card__setting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    .view-button button {
+      width: 100%;
+    }
+    .setting-buttons > div {
+      padding: 5px;
+    }
+  }
+  &::before {
+    content: '';
+    background-color: rgba(255, 255, 255, .5);
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0 0 0 3px #ededed;
+    &::before {
+      z-index: 5;
+      opacity: 1;
+      visibility: visible;
+    }
+    .at-card__setting {
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+// Notification
+@media screen and (max-width: 400px) {
+  .at-notification {
+    width: 80% !important;
+  }
+}

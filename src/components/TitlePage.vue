@@ -20,7 +20,6 @@
 
 <style lang="scss">
   .title-page {
-    margin: 20px 0;
     text-align: center;
   }
 </style>

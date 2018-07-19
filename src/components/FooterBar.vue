@@ -9,8 +9,12 @@
 
 <style lang="scss" scoped>
   footer {
-    border-top: 1px solid #e2ecf4;
+    border-top: 1px solid #ededed;
     padding: 20px;
     text-align: right;
+    a {
+      color: #2C405A;
+      font-size: 16px;
+    }
   }
 </style>
