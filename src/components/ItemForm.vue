@@ -26,7 +26,7 @@
         </div>
         <div class="col-xs-24 col-md-24 col-lg-24 flex-between flex">
           <at-button
-            @click="$router.go(-1)"
+            @click="$router.back()"
             type="primary"
             icon="icon-arrow-left"
           >
@@ -65,9 +65,10 @@
     },
     created () {
       if (this.isEditItem) {
-        this.item.title = this.items[this.$route.params.id].title
-        this.item.description = this.items[this.$route.params.id].description
-        this.item.picture = this.items[this.$route.params.id].picture
+        const editItem = this.items[this.$route.params.id]
+        this.item.title = editItem.title
+        this.item.description = editItem.description
+        this.item.picture = editItem.picture
       }
     },
     components: { TitlePage },
@@ -81,24 +82,21 @@
     methods: {
       addItem () {
         if (this.isFieldInFormNull) {
-          this.fieldIsNull()
+          this.$Notify.error({title: 'Field is null'})
           return
         }
         this.items.push(this.item)
         this.$Notify.success({title: 'This item added'})
-        this.$router.go(-1)
+        this.$router.back()
       },
       saveItem () {
         if (this.isFieldInFormNull) {
-          this.fieldIsNull()
+          this.$Notify.error({title: 'Field is null'})
           return
         }
         this.items[this.$route.params.id] = this.item
         this.$Notify.success({title: 'This item edited'})
-        this.$router.go(-1)
-      },
-      fieldIsNull () {
-        this.$Notify.error({title: 'Field is null'})
+        this.$router.back()
       }
     },
     computed: {
