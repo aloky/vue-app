@@ -39,7 +39,13 @@
                 </at-tooltip>
               </div>
               <div class="at-card__body view-button">
-                <at-button type="info" size="large">View</at-button>
+                <router-link
+                  class="at-btn at-btn--info at-btn--large"
+                  tag="button"
+                  :to="`/update_items/item/${index}`"
+                >
+                  <span class="at-btn__text">View</span>
+                </router-link>
               </div>
             </div>
           </at-card>

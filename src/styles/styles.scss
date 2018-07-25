@@ -24,18 +24,49 @@ div[class^='col'], div[class*='col']{
   }
 }
 
+// header
+header {
+  border-bottom: 1px solid #ededed;
+  white-space: nowrap;
+  .header-top {
+    border-bottom: 1px solid #ededed;
+  }
+  .header-menu {
+    background-color: rgba(255, 255, 255, .5);
+    .at-menu {
+      overflow-x: auto;
+      display: flex;
+    }
+  }
+  .logo {
+    padding: 15px;
+    a {
+      color: #2C405A;
+      font-size: 20px;
+      line-height: 40px;
+      font-weight: bold;
+    }
+  }
+  .at-menu--horizontal {
+    border-bottom: none;
+  }
+  .at-menu {
+    background-color: transparent;
+  }
+}
+
 // card
 .at-card {
   box-shadow: 0 0 0 1px #ededed;
   transition: all .2s ease-in-out;
   overflow: hidden;
-  .at-card__img {
+  &__img {
     width: 100%;
     height: 200px;
     background: no-repeat center;
     background-size: cover;
   }
-  .at-card__setting {
+  &__setting {
     position: absolute;
     top: 0;
     left: 0;
@@ -83,5 +114,66 @@ div[class^='col'], div[class*='col']{
 @media screen and (max-width: 400px) {
   .at-notification {
     width: 80% !important;
+  }
+}
+
+// change log page
+.at-timeline {
+  &__content {
+    top: -3px;
+  }
+  .description {
+    margin-top: 5px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    ul {
+      padding: 5px;
+      list-style: circle inside;
+    }
+  }
+}
+.content-change-log {
+  width: 100%;
+  padding: 20px;
+}
+.date {
+  padding: 2px 5px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+// item page
+.item-page {
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    z-index: -1;
+    background: no-repeat center #ededed;
+    background-size: cover;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      opacity: .85;
+    }
+  }
+  &__description {
+    margin: 0 0 20px;
+  }
+  &__buttons > div {
+    padding: 5px;
+  }
+  .title-page {
+    margin: 20px 0;
   }
 }

@@ -6,6 +6,11 @@
         <at-timeline>
           <at-timeline-item color="green">
             <i slot="dot" class="icon icon-file-text"></i>
+            <p>Add View item page</p>
+            <small class="date">19.07.18</small>
+          </at-timeline-item>
+          <at-timeline-item color="green">
+            <i slot="dot" class="icon icon-file-text"></i>
             <p>Add Update items page</p>
             <small class="date">19.07.18</small>
             <div class="description">
@@ -43,30 +48,3 @@
     components: { TitlePage }
   }
 </script>
-
-<style lang="scss">
-  .at-timeline {
-    .at-timeline__content {
-      top: -3px;
-    }
-    .description {
-      margin-top: 5px;
-      padding: 15px;
-      border-radius: 5px;
-      background-color: #f5f5f5;
-      ul {
-        padding: 5px;
-        list-style: circle inside;
-      }
-    }
-  }
-  .content-change-log {
-    width: 100%;
-    padding: 20px;
-  }
-  .date {
-    padding: 2px 5px;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-  }
-</style>

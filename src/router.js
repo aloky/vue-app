@@ -5,6 +5,7 @@ import Router from 'vue-router'
 import HomePage from './views/HomePage.vue'
 import ChangeLogPage from './views/ChangeLogPage.vue'
 import UpdateItemsPage from './views/UpdateItemsPage.vue'
+import ViewItemPage from './views/ViewItemPage.vue'
 
 // components
 import ItemForm from './components/ItemForm.vue'
@@ -28,6 +29,11 @@ export default new Router({
       name: 'UpdateItemsPage',
       component: UpdateItemsPage,
       children:[
+        {
+          path: 'item/:id',
+          name: 'ViewItem',
+          component: ViewItemPage,
+        },
         {
           path: 'new',
           name: 'NewItem',

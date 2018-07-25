@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <a href="https://github.com/aloky/vue-app">
+    <a href="https://github.com/aloky/vue-app" target="_blank">
       <i class="icon icon-github"></i>
       github
     </a>
