@@ -12,7 +12,7 @@
         <router-link
           class="at-btn at-btn--info"
           tag="button"
-          :to="`/update_items/edit/${$route.params.id}`"
+          :to="{ name: 'EditItem', params: { id: $route.params.id } }"
         >
           <i class="at-btn__icon icon icon-edit-2"></i>
           Edit
@@ -41,16 +41,16 @@
       }
     },
     methods: {
-      removeItem (index) {
+      removeItem (id) {
         this.$Modal.confirm({
           title: 'Comfirm',
           content: 'Are you sure you want to delete?',
           okText: 'Delete',
           width: 250
         }).then(() => {
-          this.$router.push('/update_items')
+          this.$router.push({ name: 'UpdateItemsPage' })
           this.$Notify.success({title: 'This item deleted'})
-          this.items.splice(index, 1)
+          this.items.splice(id, 1)
         }).catch(() => {})
       }
     }

@@ -1,9 +1,9 @@
 <template>
-  <header>
+  <header class="header">
     <div class="header-top">
       <div class="container flex-between">
         <div class="logo">
-          <router-link to="/">aloky-app</router-link>
+          <router-link :to="{ name: 'HomePage' }">aloky-app</router-link>
         </div>
       </div>
     </div>
@@ -12,7 +12,7 @@
         <at-menu mode="horizontal">
           <router-link
             class="at-menu__item"
-            to="/change_log"
+            :to="{ name: 'ChangeLogPage' }"
             tag="li"
             exact-active-class="at-menu__item--active"
           >
@@ -23,7 +23,7 @@
           </router-link>
           <router-link
             class="at-menu__item"
-            to="/update_items"
+            :to="{ name: 'UpdateItemsPage' }"
             tag="li"
             exact-active-class="at-menu__item--active"
           >

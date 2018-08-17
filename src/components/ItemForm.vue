@@ -61,7 +61,10 @@
 
   export default {
     props: {
-      items: Array
+      items: {
+        type: Array,
+        required: false
+      }
     },
     created () {
       if (this.isEditItem) {
@@ -75,6 +78,8 @@
     data () {
       return {
         item: {
+          title: '',
+          description: '',
           picture: 'http://via.placeholder.com/350x150'
         }
       }
@@ -101,15 +106,10 @@
     },
     computed: {
       isEditItem () {
-        return !!this.$route.params.id
+        return this.$route.params.id !== undefined
       },
       isFieldInFormNull () {
-        if (
-          !this.item.title ||
-          !this.item.description ||
-          !this.item.picture
-        ) return true
-        return false
+        return !this.item.title || !this.item.description || !this.item.picture
       }
     }
   }

@@ -7,7 +7,7 @@
           <at-timeline-item color="green">
             <i slot="dot" class="icon icon-file-text"></i>
             <p>Add View item page</p>
-            <small class="date">19.07.18</small>
+            <small class="date">17.08.18</small>
           </at-timeline-item>
           <at-timeline-item color="green">
             <i slot="dot" class="icon icon-file-text"></i>

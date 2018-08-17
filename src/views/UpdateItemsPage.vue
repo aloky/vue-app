@@ -2,7 +2,7 @@
   <div>
     <div class="container flex flex-between header-page" v-if="isActiveItemForm">
       <title-page title="Update items"/>
-      <router-link class="at-btn at-btn--info" tag="button" to="/update_items/new">
+      <router-link class="at-btn at-btn--info" tag="button" :to="{ name: 'NewItem' }">
         <i class="at-btn__icon icon icon-plus"></i>
         <span class="at-btn__text">Add item</span>
       </router-link>
@@ -33,7 +33,8 @@
                   <router-link
                     class="at-btn at-btn--info at-btn--circle"
                     tag="button"
-                    :to="`/update_items/edit/${index}`">
+                    :to="{ name: 'EditItem', params: { id: index } }"
+                  >
                     <i class="at-btn__icon icon icon-edit-2"></i>
                   </router-link>
                 </at-tooltip>
@@ -42,7 +43,7 @@
                 <router-link
                   class="at-btn at-btn--info at-btn--large"
                   tag="button"
-                  :to="`/update_items/item/${index}`"
+                  :to="{ name: 'ViewItem', params: { id: index } }"
                 >
                   <span class="at-btn__text">View</span>
                 </router-link>
