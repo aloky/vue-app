@@ -37,31 +37,3 @@
     </div>
   </header>
 </template>
-
-<style lang="scss" scoped>
-  header {
-    border-bottom: 1px solid #ededed;
-    white-space: nowrap;
-    .header-top {
-      border-bottom: 1px solid #ededed;
-    }
-    .header-menu {
-      .at-menu {
-        overflow-x: auto;
-        display: flex;
-      }
-    }
-    .logo {
-      padding: 15px;
-      a {
-        color: #2C405A;
-        font-size: 20px;
-        line-height: 40px;
-        font-weight: bold;
-      }
-    }
-    .at-menu--horizontal {
-      border-bottom: none;
-    }
-  }
-</style>
