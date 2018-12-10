@@ -19,7 +19,7 @@
     "at-ui-style": "1.5.1",
     "node-sass": "4.9.3",
     "sass-loader": "7.1.0",
-    "vue-template-compiler": "2.5.17"
+    "vue-template-compiler": "2.5.20"
   },
   "browserslist": [
     "> 1%",
